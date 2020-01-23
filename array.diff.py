@@ -1,9 +1,8 @@
 def array_diff(a, b):
 
-    # a-b nefunguje pro listy
-
-    a_set = set(a)
-    b_set = set(b)
-    return list(a_set.difference(b_set))
+    for numberb in b:
+        while numberb in a:
+            a.remove(numberb)
+    return a
 
 print(array_diff([1,2,2,2,2,2,3],[2]))
