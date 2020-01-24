@@ -1,13 +1,17 @@
 def find_outlier(integers):
-
-    sum_odd = 0
-    sum_even = 0
+    odd = []
+    even = []
 
     for number in integers:
         if number % 2 == 0:
-            sum_even += number
+            even.append(number)
         else:
-            sum_odd += number
-    return min(sum_odd, sum_even)
+            odd.append(number)
 
-print(find_outlier([2, 4, 0, 100, 4, 11, 2602, 36]))
+    if len(even) > len(sum_odd):
+        return odd[0]
+    else:
+        return even[0]
+
+
+print(find_outlier([2, 4, 6, 8, 10, 3]))
