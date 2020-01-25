@@ -1,10 +1,6 @@
 def duplicate_count(text):
-    multiples = []
-    dic = {}
-    for i in text.lower():
-        dic[i] = dic.get(i, 0) + 1
-    [multiples.append(i) for i in dic if dic[i] > 1]
-    return len(multiples)
+
+    return len([c for c in set(text.lower()) if text.lower().count(c) > 1])
 
 
 print(duplicate_count('aaabbcdea'))
